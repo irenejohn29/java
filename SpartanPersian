@@ -1,0 +1,118 @@
+import java.util.*;
+public class SpartaAndPersia {
+    public static void main (String[] args) {
+        Scanner s = new Scanner(System.in);
+        int t = s.nextInt();
+        int sparta = 0, persia = 0;
+        while (t-- >= 0) {
+            String str = s.nextLine();
+            int H = 0, h = 0, E = 0, e = 0, C = 0,c = 0, A = 0, a = 0;
+            for (int i = 0; i < str.length(); i++) {
+                if (str.charAt(i) == 'H') {
+                    H++;
+                    int j = i+1;
+                    while (str.charAt(j) == '.') {
+                        H++;
+                        j++;
+                    }
+                    if(str.charAt(i) == 'X') {
+                        H+=2;
+                    }
+                }
+               
+                if (str.charAt(i) == 'h') {
+                    h++;
+                    int j = i+1;
+                    while (str.charAt(j) == '.') {
+                        h++;
+                        j++;
+                    }
+                    if(str.charAt(i) == 'X') {
+                        h+=2;
+                    }
+                }
+                if (str.charAt(i) == 'E') {
+                    E++;
+                    int j = i+1;
+                    while (str.charAt(j) == '.') {
+                        E++;
+                        j++;
+                    }
+                    if(str.charAt(i) == 'X') {
+                        E+=2;
+                    }
+                }
+                if (str.charAt(i) == 'e') {
+                    e++;
+                    int j = i+1;
+                    while (str.charAt(j) == '.') {
+                        e++;
+                        j++;
+                    }
+                    if(str.charAt(i) == 'X') {
+                        e+=2;
+                    }
+                }
+                if (str.charAt(i) == 'C') {
+                    C++;
+                    int j = i+1;
+                    while (str.charAt(j) == '.') {
+                        C++;
+                        j++;
+                    }
+                    if(str.charAt(i) == 'X') {
+                        C+=2;
+                    }
+                }
+                if (str.charAt(i) == 'c') {
+                    c++;
+                    int j = i+1;
+                    while (str.charAt(j) == '.') {
+                        c++;
+                        j++;
+                    }
+                    if(str.charAt(i) == 'X') {
+                        c+=2;
+                    }
+                }
+                if (str.charAt(i) == 'A') {
+                    A++;
+                    int j = i+1;
+                    while (str.charAt(j) == '.') {
+                        A++;
+                        j++;
+                    }
+                    if(str.charAt(i) == 'X') {
+                        A+=2;
+                    }
+                }
+                if (str.charAt(i) == 'a') {
+                    a++;
+                    int j = i+1;
+                    while (str.charAt(j) == '.') {
+                        a++;
+                        j++;
+                    }
+                    if(str.charAt(i) == 'X') {
+                        a+=2;
+                    }
+                }
+               
+            }
+           
+            sparta += (5 * H) + (10 * E) + (1 * C) + (3 * A);
+            persia += (5 * h) + (10 * e) + (1 * c) + (3 * a);
+//          sparta += sparta;
+//          persia
+        }
+        if (sparta > persia) {
+            System.out.println("Sparta Wins");
+        } else {
+            System.out.println("Persia Wins");
+        }
+       
+//      System.out.println(sparta);
+//      System.out.println(persia);
+        s.close();
+    }
+}
